@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A11y</title>
+</head>
+<style>
+/* Element Styles  */
+
+    body{
+        background: #FAF1E4;
+    }
+
+    div{
+        text-align: center;
+        margin-left: 48px;
+        margin-right: 24px;
+    }
+
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #435334;
+        text-align: center;
+        margin-top: 24px;
+        padding-top: 24px;
+    }
+    
+
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #435334;
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+    }
+
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #435334;
+        text-align: center;
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+    
+    img{
+        max-width: 100%;
+    }
+
+    button{
+        display: block;
+        margin: 0% auto;
+        background:#435334;
+        color: #FAF1E4;
+        height: 34px;
+        max-width: fit-content;
+    }
+
+    button:hover{
+        background: #9EB384;
+        color: #000;
+    }
+
+    a{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a:hover{
+        color: gray;
+    }
+
+/* Dark theme  */
+
+.dark{
+    background: #000;
+    color: #CEDEBD;
+}
+
+.dark .container{
+    background: #435334;
+}
+
+.dark a{
+    color: #FAF1E4;
+}
+.dark h1{
+    color: #FAF1E4;
+}
+.dark h2{
+    color: #FAF1E4;
+}
+.dark p{
+    color: #FAF1E4;
+}
+
+
+/* Custom class styles */
+
+.container{
+    margin: 0% auto;
+    max-width: 900px;
+    height: fit-content;
+    background: #CEDEBD;
+    padding: 24px,24px,24px,24px; 
+    border-radius: 20px;  
+}
+
+.cripCamp-photo{
+    border-radius: 12px;
+    height: 130px;
+}
+.cripCamp-photo:hover{
+    transform: scale(150%);
+}
+
+.tangled-photo{
+    border-radius: 12px;
+    height: 130px;
+}
+.tangled-photo:hover{
+    transform: scale(150%);
+}
+
+.wcag-photo{
+    border-radius: 12px;
+    height: 130px;
+}
+.wcag-photo:hover{
+    opacity: 50%;
+}
+
+.special-photo{
+    border-radius: 12px;
+    height: 400px;
+    margin: 0% auto;
+}
+.special-photo:hover{
+    transform: scale(110%);
+}
+
+.aW-photo{
+    border-radius: 12px;
+    height: 130px;
+}
+.aW-photo:hover{
+    transform: scale(150%);
+   
+}
+
+.grid{
+    display: grid;
+    width: 800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 12px;
+    object-fit:cover;
+    transition: 200ms ease-in-out;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.grid:hover{
+    
+}
+
+
+/* .textLink{ need to clear base element formatting inforder for css to work  but this is linked with teh other elemst like images */
+
+</style>
+
+<body>
+    <button class="themeButton"> Change theme </button>
+
+
+    <div class="container"
+    >
+
+        <h1> Looking for A11y recomendations? </h1>
+        <h2> Here is a list of curent movies, books, and resourses. </h2>
+
+        <a href="https://www.imdb.com/title/tt9381622/">
+            <img 
+            src="images/special.jpg" 
+            alt=""
+            class="special-photo"
+            >
+        </a>
+
+
+<div class="grid">
+            <a href="https://www.imdb.com/title/tt8923484/">
+                <img 
+                src="images/cripcamp.jpg" 
+                alt=""
+                class="cripCamp-photo"
+                >
+            </a>
+            
+            <a href="https://tangledarts.org/">
+                <img 
+                src="images/tangled.jpg"
+                alt=""
+                class="tangled-photo"
+                >
+            </a>
+
+            <a href="https://www.w3.org/TR/WCAG21/">
+                <img 
+                src="images/wcag.png"
+                alt=""
+                class="wcag-photo">
+            </a>
+        
+            <a href="https://www.youtube.com/watch?v=8sX9IEHWRJ8">
+                <img 
+                src="images/apple.jpeg"
+                alt=""
+                class="aW-photo"
+                >
+            </a>
+</div>     
+       
+
+        <p>
+            Loroipsum for now Loroipsum for now Loroipsum for now Loroipsum for now 
+            Loroipsum for now Loroipsum for now Loroipsum for now Loroipsum for now 
+            Loroipsum for now Loroipsum for now Loroipsum for now Loroipsum for now 
+        </p>
+
+        <br>
+
+        <a 
+        class="textLink"
+        href="https://medium.com/lexisnexis-design/how-ai-can-influence-accessibility-aadd6a398996"> Check out how Ai is influenceing acessabibity
+        </a>
+        <br><br><br>
+        
+    </div>
+    <br>
+    <br>
+    <footer> Coded by Sarina Luchetta </footer> 
+
+    <script>
+
+        function changeTheme(){
+            let body =document.querySelector("body");
+
+            if (body.classList.contains("dark")){
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        
+
+        }
+
+        let themeButton = document.querySelector(".theam-Button");
+        themeButton=addEventListener("click", changeTheme);
+
+
+
+    </script>
+</body>
+</html>

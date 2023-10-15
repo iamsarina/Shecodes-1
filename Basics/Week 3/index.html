@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- CSS Elemnts  -->
+<style>
+    h1{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+   
+    }
+
+    h2{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    }
+ 
+    hr{
+        border: none; /* remove the default border */
+        height: 8px; /* set the height of the line */
+        background-color: rgb(11, 88, 46); /* set the color of the line */
+        margin: 10px 40px; /* add some space above and below the line */
+        padding-left: 2px,20px,22px,20px;
+    }
+   
+    img{
+        display: block;
+        margin: 0 auto;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        max-width: 100%;
+        height: 300px;
+        width: 400px;
+        border-radius: 8%;
+    }
+    
+    p{
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        color: #f1e9e3;
+        margin: 0 auto;
+        padding: 0 auto;
+        border: 0 auto;
+    }
+
+    a {
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f1e9e3;
+        font-size: small;
+    }
+
+    a:hover {
+        color: #c0b9b4;
+        text-decoration: none;
+        transition: ease-in-out;
+    }
+
+    button{
+        margin: 0 auto;
+        padding: 0 auto;
+        height: 44px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: #583659;
+        background-color: #f8def9;
+        border: solid 1px;
+        border-color: #e4cbe5;
+        border-radius: 6px;
+        display: inline-block;
+        box-shadow: 2px 4px 8px #d25cd6;
+    }
+
+    button:hover {
+        background-color:#e4cbe5;
+    }
+     
+    
+
+    body { 
+    background: #fdf9ef;
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 0 auto;
+    width: 0 auto;
+    }
+   
+
+</style>
+
+<!-- CSS CLASSES -->
+<style>
+.div-container {   
+    background: linear-gradient(to top, #0b2c24, #206d46);
+    border: 1px solid rgb(17, 51, 26);
+    border-radius: 40px;
+    margin: 40px auto;
+    padding: 100px auto, 40px;
+    height: 1200px;
+    width: 800px;
+    
+}
+
+.container-center{
+    text-align: center;
+}
+     
+.h1-styling{
+    padding: 40px, auto, 40px, auto;
+    margin: 4%;
+    color: #7f0f85;
+    font-weight: 800;
+    font-size: 64px;
+    border:5px solid #144019;
+    border-radius: 12px;
+    background-color: #faffc7;
+    border-style:ridge
+}    
+
+.h2-styling{
+    padding: 40px, auto, 40px, auto;
+    margin: 0%;
+    color: #f1e9e3;
+    font-weight: 400;
+    font-size: 34px;
+}
+
+.p-styling{
+    margin: 4% auto;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 18px;
+}
+
+.link-style{
+    color: #f1e9e3;
+    font-weight: 400;
+    font-size: small;
+    text-decoration: underline;
+}
+
+
+</style>
+
+<body>
+<div class="div-container">
+
+    <div>
+        <h1 class="h1-styling">
+        Colboartaion Invite
+        </h1>
+    </div>
+
+    <br>
+
+    <h2 class="h2-styling">
+    🎨 Designers learning to code 💻 
+    </h2>
+
+    <br>
+
+<hr>
+
+    <img src="https://images.pexels.com/photos/4491918/pexels-photo-4491918.jpeg?cs=srgb&dl=pexels-ivan-samkov-4491918.jpg&fm=jpg" alt="">
+
+<hr>
+
+    <p class="p-styling"> <strong> Designers learning to code </strong> 
+        I am a designer, and I am learning to code, and I am passionate about collaboration? Well, if you are also a product designer, who is interested in coding and learning more about HTML,CSS and JavaScript in order to better your practice, so you can work collaboratively with stakeholders, then let's collaborate together and pair together to design and build something cool!
+    </p>
+
+
+
+<div class="container-center">
+
+    <a href="https://medium.com/@iamsarinaluchetta"> Check out my previous colabortaions</a>
+
+    <br> <br> <br>
+
+    <button>
+        Connect now!
+    </button>
+
+
+
+
+</div>
+    
+
+    <!-- JAVA -->
+    <script>
+
+        function clickButton (){
+            
+            let name = prompt("what is your name?");
+
+            if (!name){
+                alert("OPS you have to eneter your name to signup. Please try again")
+            }
+            else {
+                alert(" Thank you," + name + " we will be in touch!")
+                }
+        }
+        let connectNow = document.querySelector("button");
+        connectNow = document.addEventListener("click", clickButton)
+    
+    </script> 
+</div>   
+</body>
+</html>
+
+
+
+ <!-- EDITS  1. claik able agrea is the whole page fro button, the div container is covering eveything -->
+ <!--  the link url is covred by the button -->
